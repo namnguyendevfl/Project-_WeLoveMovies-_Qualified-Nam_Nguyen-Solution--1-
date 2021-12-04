@@ -10,11 +10,11 @@ router.use("/:movieId/reviews", controller.validateMovieId, reviewsRouter);
 router
 	.route("/")
 	.get(controller.list)
-	// .all(methodNotAllowed);
+	.all(methodNotAllowed);
 
 router
 	.route("/:movieId")
 	.get(controller.read)
-	// .all(methodNotAllowed);
+	.all(methodNotAllowed);
 
 module.exports = router;
